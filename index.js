@@ -17,7 +17,7 @@ module.exports = function(persistor, config) {
 
   window.addEventListener('storage', function (event) {
     if (isFocused) return;
-    //|| !event.newValue
+
     console.log('isFocused::: ', isFocused);
     console.log('handleStorageEvent::: key ', event.key);
     console.log('handleStorageEvent::: oldValue ', event.oldValue);
