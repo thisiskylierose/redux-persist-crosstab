@@ -28,7 +28,7 @@ module.exports = function(persistor, config) {
       if (whitelist && whitelist.indexOf(keySpace) === -1) { return; }
       if (blacklist && blacklist.indexOf(keySpace) !== -1) { return; }
       // rehydrate storage with the new value
-      persistor.rehydrate(keySpace, event.newValue, function (keySpace, newState) {
+      persistor.rehydrate(keySpace, event.newValue, function (key, state) {
         // @TODO handle errors?
       });
     }
